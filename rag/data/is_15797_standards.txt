@@ -1,0 +1,21 @@
+# Bureau of Indian Standards (BIS) IS 15797:2008
+# Code of Practice for Design and Installation of Rainwater Harvesting Systems in Buildings
+
+1. SCOPE AND JURISDICTION:
+- IS 15797 governs the planning, design, execution, and maintenance of rooftop rainwater harvesting structures for residential, commercial, and educational institutional campuses.
+
+2. CATCHMENT & CONVEYANCE SYSTEM DESIGN:
+- Gutters & Downspouts: Minimum gradient of 1:100 (1%) for rectangular and semi-circular gutters to prevent stagnant pooling and mosquito breeding.
+- Material Specifications: UV-stabilized unplasticized PVC (uPVC) or galvanized iron (GI) piping conforming to IS 4985 / IS 1239.
+- Sizing Norm: 1 sq. cm of downpipe cross-section per 1 to 1.5 sq. meters of roof catchment area, accommodating peak rainfall intensities of 50-75 mm/hr.
+- Gutter Screens: Stainless steel or high-density nylon mesh screens (aperture 2 mm to 5 mm) at downspout inlets to stop foliage and tree twigs.
+
+3. SETTLING & RETENTION TANK DESIGN:
+- Tank Placement: Underground modular ferro-cement, reinforced cement concrete (RCC), or rotational molded food-grade polyethylene (HDPE).
+- Overflow Provision: Minimum 150 mm diameter overflow pipe positioned at top water level (TWL), graded towards municipal storm network or ground recharge shaft.
+- Vent Pipes: Insect-proof brass wire mesh cap over all air relief vents to prevent insect ingress.
+- Cleaning Sump: Incline floor at 1:50 towards a central sludge drainage pit with submersible pump connection.
+
+4. MAINTENANCE PROTOCOL:
+- Pre-Monsoon Maintenance: Mandatory pressure washing of rooftop surfaces, clearing of downspouts, and replacement of top 5 cm filter sand layer before the onset of monsoon rains.
+- First Rain Washing: The first heavy storm of the monsoon season must be completely diverted to waste.

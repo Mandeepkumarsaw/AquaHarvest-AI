@@ -1,0 +1,28 @@
+# Central Ground Water Board (CGWB) Guidelines for Rainwater Harvesting & Artificial Recharge
+
+1. RUNOFF COEFFICIENTS (C-FACTOR) FOR URBAN CATCHMENTS:
+- Concrete Roof Slabs / Terraces: 0.80 to 0.90 (Design standard: 0.85). Concrete roofs provide maximum catchment efficiency with minimal surface absorption.
+- Clay / Terracotta Tiles: 0.75 to 0.85 (Design standard: 0.75). Slightly lower yield due to joint gaps and tile porosity.
+- Galvanized Iron (GI) / Metal Sheets: 0.90 to 0.95 (Design standard: 0.90). Impervious surface with near-zero retention; runoff commences rapidly.
+- Paved Ground / Paver Blocks: 0.50 to 0.70.
+- Lawns, Parks & Vegetated Green Roofs: 0.10 to 0.20. High moisture retention and evapotranspiration.
+
+2. FIRST FLUSH DIVERSION REQUIREMENTS:
+- Rule: The initial 1.0 mm to 2.0 mm of precipitation in any storm event must be completely segregated and discharged.
+- Rationale: First-flush runoff carries accumulated airborne particulate matter, bird droppings, vehicular soot, and dry leaf powder.
+- Engineering Sizing: First Flush Volume V_ff = Catchment Area (sq.m) * 0.0015 m (1.5 mm).
+- Mechanism: Automated floating ball diverter or manually drained bypass standpipe with drain valve.
+
+3. DUAL-MEDIA & MULTI-LAYER SLOW GRAVITY FILTRATION:
+- Standard Filtration Chamber Layers (bottom-up):
+  a) Bottom Bed: 40-50 cm thick layer of clean river boulders or rounded pebbles (size 50-100 mm).
+  b) Intermediate Bed: 30-40 cm thick layer of graded river gravel (size 10-20 mm).
+  c) Top Filter Bed: 30-40 cm thick layer of coarse washed silica sand (effective grain size 1.5-2.0 mm).
+  d) Optional Polish: 10 cm layer of activated charcoal granules for odor and color reduction.
+- Filtration Rate: Sized at 1.0 to 1.5 liters per minute per square foot of filter surface area.
+
+4. ARTIFICIAL AQUIFER RECHARGE SHAFTS & INJECTION BORES:
+- Purpose: Recharge shallow unconfined aquifers and replenish depleted groundwater tables.
+- Shaft Dimensions: Diameter 1.5 m to 2.5 m, depth between 6 m to 15 m depending on permeable sandy strata depth.
+- Inflow Screening: Slotted/perforated PVC casing pipe (min 150 mm dia) surrounded by a gravel pack jacket to prevent silt intrusion.
+- Safety Mandate: Never inject surface runoff directly into deep confined drinking water aquifers without secondary filtration.

@@ -1,0 +1,15 @@
+# Municipal Rainwater Harvesting Bylaws & Statutory Mandates for Educational Campuses
+
+1. MANDATORY INSTALLATION THRESHOLDS (STATE BYLAWS):
+- Karnataka / BBMP Bangalore: Mandatory RWH for all sites measuring >= 1,200 sq. ft (111 sq.m) and all institutional campuses regardless of plot size. Penalty: 25% to 50% water surcharge on monthly BWSSB utility tariffs for non-compliance.
+- Tamil Nadu / CMWSSB Chennai: Mandatory rainwater harvesting structures for all public, educational, and commercial buildings under the Tamil Nadu Municipal Laws Act. Mandatory aquifer recharge trenches along perimeter boundaries.
+- Delhi / DJB: All institutional campuses and buildings with plot area >= 100 sq.m must install RWH systems. Non-compliant properties are levied an environmental penalty and face disconnection of municipal water supply.
+- Maharashtra / BMC Mumbai & PMC Pune: RWH compulsory for all new plots > 500 sq.m. Green building concession rebate of 5% on municipal property taxes for compliant institutions.
+- Rajasthan / Jaipur JDA: Mandatory storage tanks and injection wells for institutional establishments > 300 sq.m to combat regional groundwater crisis.
+
+2. PENALTIES AND COMPLIANCE AUDITS:
+- Annual Certification: Campuses must submit an annual RWH Operational Fitness Certificate signed by a certified civil or hydrological engineer.
+- Borewell Metering: Ground extraction borewells are subject to CGWA (Central Ground Water Authority) NOC permissions; institutions without RWH are denied borewell operating permits.
+
+3. RECHARGE WELL RESTRICTIONS:
+- Direct drainage of paved parking lot oil-slick runoff into aquifer recharge pits without hydrocarbon oil-water separators is strictly prohibited.

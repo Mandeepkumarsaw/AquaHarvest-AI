@@ -1,0 +1,22 @@
+# Water Quality Norms and Health Guidelines (BIS 10500:2012 & WHO Norms)
+
+1. RAW RAINWATER CHARACTERISTICS:
+- pH: Typically 6.0 to 7.5 (slightly acidic in urban environments due to dissolved atmospheric CO2/SOx).
+- Total Dissolved Solids (TDS): Extremely low, typically 20 to 80 ppm (soft water).
+- Turbidity: High during initial rainfall surges (10-50 NTU) due to suspended soot, dust, and pollen; drops to < 5 NTU after proper first-flush diversion.
+- Pathogens: Coliform bacteria may be present from avian feces and rodent traffic on rooftop catchments.
+
+2. NON-POTABLE REUSE STANDARDS (TOILET FLUSHING & IRRIGATION):
+- Turbidity: < 5 NTU.
+- Fecal Coliforms: Nil detected per 100 ml for indoor flushing.
+- Odor & Appearance: Unobjectionable, colorless.
+- Treatment Required: Leaf screening + Slow sand filtration + Light chlorination (0.5 to 1.0 mg/L residual chlorine).
+
+3. DRINKING / POTABLE REUSE CRITERIA (BIS 10500:2012):
+- Rainwater must NOT be consumed directly without secondary multi-barrier disinfection.
+- Required Treatment Train for Potable Use:
+  a) Downpipe first-flush diverter (1.5 mm diversion).
+  b) Dual-media quartz sand & activated granular carbon bed.
+  c) 5-micron spun polypropylene cartridge sediment filter.
+  d) UV (Ultraviolet) disinfection or Ozonation to achieve 99.99% microbial inactivation.
+  e) Optional remineralization cartridge (calcium/magnesium) if TDS < 50 ppm.

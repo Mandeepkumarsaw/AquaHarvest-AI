@@ -1,0 +1,814 @@
+/* ==========================================================================
+   AquaHarvest AI - Eco-Editorial Luxury Climate-Tech Theme
+   Inspired by clean modern sustainability product design (EcoSort AI style)
+   Typography: Fraunces (Editorial Display Serif) + Plus Jakarta Sans + JetBrains Mono
+   Palette: Warm Light Eco-Canvas (#F6F8F3), Deep Forest Green (#0B3828), 
+            Luminous Lime (#C4F646), Pure White (#FFFFFF)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600;1,9..144,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+/* Global Reset & Typography */
+html, body, [class*="css"], .stApp {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    background-color: #F6F8F3 !important;
+    color: #0A2B1E !important;
+    letter-spacing: -0.01em;
+}
+
+/* Streamlit Main Container */
+.main .block-container {
+    padding-top: 2rem !important;
+    padding-bottom: 4rem !important;
+    max-width: 1260px !important;
+}
+
+/* Sidebar Clean Minimalist Styling */
+[data-testid="stSidebar"] {
+    background-color: #EEF3E9 !important;
+    border-right: 1px solid rgba(11, 56, 40, 0.08) !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p {
+    color: #486153 !important;
+}
+
+[data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3 {
+    font-family: 'Fraunces', serif !important;
+    color: #0B3828 !important;
+    font-weight: 700 !important;
+}
+
+/* Hero Header Section */
+.hero-header {
+    background: #FFFFFF;
+    border: 1px solid rgba(11, 56, 40, 0.08);
+    border-radius: 26px;
+    padding: 42px 48px;
+    margin-bottom: 34px;
+    margin-top: 10px;
+    box-shadow: 0 4px 24px rgba(11, 56, 40, 0.04);
+    position: relative;
+    overflow: visible !important; /* Allows orbital rings, floating chips & aura to move outside the white box! */
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-header:hover {
+    border-color: rgba(11, 56, 40, 0.16);
+    box-shadow: 0 10px 36px rgba(11, 56, 40, 0.07);
+}
+
+/* Hero Keyframe Animations */
+@keyframes floatSphere {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+        box-shadow: 0 14px 30px rgba(178, 237, 63, 0.35), 0 0 18px rgba(196, 246, 70, 0.2);
+    }
+    50% {
+        transform: translateY(-8px) rotate(1.5deg);
+        box-shadow: 0 22px 42px rgba(178, 237, 63, 0.5), 0 0 32px rgba(196, 246, 70, 0.35);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+        box-shadow: 0 14px 30px rgba(178, 237, 63, 0.35), 0 0 18px rgba(196, 246, 70, 0.2);
+    }
+}
+
+@keyframes waterDropBob {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 2px 4px rgba(30, 64, 175, 0.2));
+    }
+    50% {
+        transform: translateY(-5px) scale(1.08);
+        filter: drop-shadow(0 6px 12px rgba(30, 64, 175, 0.35));
+    }
+}
+
+@keyframes softHeadingBreath {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes pulseDot {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(85, 184, 38, 0.6);
+    }
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 0 6px rgba(85, 184, 38, 0);
+    }
+}
+
+@keyframes gentleShimmer {
+    0%, 100% {
+        color: #167A53;
+    }
+    50% {
+        color: #0E9F6E;
+        text-shadow: 0 0 14px rgba(14, 159, 110, 0.25);
+    }
+}
+
+/* Pill with cursor interaction */
+.hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #E8F5D8;
+    color: #245720;
+    border: 1px solid #D2EDBA;
+    padding: 6px 16px;
+    border-radius: 9999px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: default;
+}
+
+.hero-pill:hover {
+    transform: translateY(-2px);
+    background: #E0F2CC;
+    box-shadow: 0 4px 14px rgba(36, 87, 32, 0.12);
+    border-color: #BEE39F;
+}
+
+.hero-pill-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #55B826;
+    display: inline-block;
+    animation: pulseDot 2.2s infinite ease-in-out;
+}
+
+/* Hero Title: Soft breathing animation + Dynamic cursor reach movement */
+.hero-title {
+    font-family: 'Fraunces', Georgia, serif !important;
+    font-size: 3.2rem !important;
+    font-weight: 700 !important;
+    color: #0B3828 !important;
+    line-height: 1.08 !important;
+    margin: 0 0 14px 0 !important;
+    letter-spacing: -0.03em !important;
+    display: inline-block;
+    animation: softHeadingBreath 5s ease-in-out infinite;
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), letter-spacing 0.45s ease;
+    cursor: default;
+}
+
+.hero-title:hover {
+    transform: translateX(8px) translateY(-3px);
+    letter-spacing: -0.02em !important;
+}
+
+.hero-italic {
+    font-style: italic !important;
+    font-weight: 400 !important;
+    color: #167A53 !important;
+    display: inline-block;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.4s ease, text-shadow 0.4s ease;
+    animation: gentleShimmer 6s ease-in-out infinite;
+}
+
+.hero-italic:hover {
+    transform: translateY(-4px) scale(1.06) rotate(-1.5deg);
+    color: #0E9F6E !important;
+    text-shadow: 0 6px 20px rgba(14, 159, 110, 0.35);
+}
+
+.hero-subtitle {
+    color: #4A6356 !important;
+    font-size: 1.15rem !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+    max-width: 680px;
+    margin-bottom: 0 !important;
+    transition: transform 0.35s ease, color 0.35s ease;
+}
+
+.hero-header:hover .hero-subtitle {
+    color: #2F4D3E !important;
+}
+
+/* ==========================================================================
+   Grand Hydro-Emblem Logo System (Expanded & Multi-Orbit)
+   ========================================================================== */
+
+/* Emblem Outer Positioning Wrapper */
+.hydro-emblem-wrapper {
+    position: relative;
+    width: 320px;
+    height: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: visible;
+}
+
+/* Layer 1: Inner Gyroscopic Orbital Halo */
+.hydro-orbital-ring {
+    position: absolute;
+    width: 305px;
+    height: 305px;
+    border-radius: 50%;
+    border: 1.5px dashed rgba(16, 185, 129, 0.45);
+    animation: rotateOrbit 20s linear infinite;
+    pointer-events: none;
+    transition: transform 0.5s ease, border-color 0.5s ease;
+    z-index: 1;
+}
+
+.hydro-satellite-dot {
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #C4F646;
+    box-shadow: 0 0 14px #C4F646, 0 0 5px #10B981;
+}
+
+/* Layer 1B: Outer Planetary Ring (Expands & Floats Outside White Box) */
+.hydro-orbital-ring-outer {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    border: 1px solid rgba(196, 246, 70, 0.35);
+    animation: rotateOrbitReverse 32s linear infinite;
+    pointer-events: none;
+    transition: transform 0.5s ease, border-color 0.5s ease;
+    z-index: 0;
+}
+
+.hydro-satellite-dot-outer {
+    position: absolute;
+    bottom: 26px;
+    right: 22%;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #00E5FF;
+    box-shadow: 0 0 14px #00E5FF, 0 0 5px #10B981;
+}
+
+/* Floating Satellite Micro-Chips (Bleed Outside Container Boundaries) */
+.hydro-orbit-chip {
+    position: absolute;
+    background: #FFFFFF;
+    border: 1.5px solid rgba(11, 56, 40, 0.12);
+    border-radius: 9999px;
+    padding: 5px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #0B3828;
+    box-shadow: 0 6px 18px rgba(11, 56, 40, 0.08);
+    pointer-events: none;
+    z-index: 4;
+    white-space: nowrap;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.chip-top {
+    top: -12px;
+    right: 10px;
+    animation: chipFloatA 4.2s ease-in-out infinite;
+}
+
+.chip-bottom {
+    bottom: -14px;
+    left: 8px;
+    animation: chipFloatB 4.8s ease-in-out infinite;
+}
+
+/* Layer 2: Prominent Sculpted Glass Hydro-Card Core */
+.hydro-card-core {
+    width: 250px;
+    height: 250px;
+    border-radius: 40px 40px 40px 16px;
+    background: linear-gradient(145deg, #FFFFFF 0%, #F4FDEB 35%, #DCF996 70%, #BAF446 100%);
+    border: 3px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 0 20px 45px rgba(178, 237, 63, 0.42), 0 6px 18px rgba(11, 56, 40, 0.06), inset 0 2px 4px rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    animation: floatEmblem 4.5s ease-in-out infinite;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1), border-radius 0.5s ease;
+    will-change: transform, box-shadow;
+    z-index: 3;
+}
+
+/* Layer 3: Glass Specular Shine Overlay */
+.hydro-shine-overlay {
+    position: absolute;
+    top: -60%;
+    left: -70%;
+    width: 240%;
+    height: 220%;
+    background: linear-gradient(60deg, transparent 40%, rgba(255, 255, 255, 0.6) 50%, transparent 60%);
+    transform: rotate(25deg);
+    pointer-events: none;
+    animation: glassShine 6s ease-in-out infinite;
+    transition: transform 0.8s ease;
+}
+
+/* Layer 4: Animated SVG Hydro-Mark */
+.hydro-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.hydro-vector-icon {
+    width: 76px;
+    height: 76px;
+    display: block;
+    animation: dropPulse 3.8s ease-in-out infinite;
+    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
+}
+
+/* Layer 5: Editorial Brand Title */
+.hydro-brand-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: #0B3828;
+    letter-spacing: -0.02em;
+    margin-top: 6px;
+    line-height: 1.1;
+    transition: transform 0.4s ease, letter-spacing 0.4s ease, color 0.4s ease;
+}
+
+/* Layer 6: Status Pill & Subtext */
+.hydro-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(11, 56, 40, 0.08);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    margin-top: 6px;
+    border: 1px solid rgba(11, 56, 40, 0.08);
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hydro-pulse-beacon {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #10B981;
+    display: inline-block;
+    animation: beaconPulse 1.8s infinite;
+}
+
+.hydro-status-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    color: #0B3828;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.hydro-subtext {
+    font-size: 9px;
+    font-weight: 700;
+    color: #38604C;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+/* ==========================================================================
+   Interactive Cursor Movement / Hover Reactions
+   ========================================================================== */
+
+.hydro-emblem-wrapper:hover .hydro-orbital-ring {
+    animation-duration: 7s;
+    border-color: rgba(16, 185, 129, 0.8);
+    transform: scale(1.06);
+}
+
+.hydro-emblem-wrapper:hover .hydro-orbital-ring-outer {
+    animation-duration: 11s;
+    border-color: rgba(196, 246, 70, 0.65);
+    transform: scale(1.08);
+}
+
+.hydro-emblem-wrapper:hover .chip-top {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.hydro-emblem-wrapper:hover .chip-bottom {
+    transform: translateY(5px) scale(1.05);
+}
+
+.hydro-emblem-wrapper:hover .hydro-card-core {
+    animation-play-state: paused;
+    transform: translateY(-16px) scale(1.07) rotate(1.8deg);
+    border-radius: 46px;
+    box-shadow: 0 36px 75px rgba(178, 237, 63, 0.68), 0 0 50px rgba(196, 246, 70, 0.52), inset 0 0 16px rgba(255, 255, 255, 0.9);
+}
+
+.hydro-emblem-wrapper:hover .hydro-shine-overlay {
+    transform: rotate(25deg) translate(80%, -40%);
+}
+
+.hydro-emblem-wrapper:hover .hydro-vector-icon {
+    transform: translateY(-5px) scale(1.15) rotate(-5deg);
+    filter: drop-shadow(0 8px 18px rgba(16, 185, 129, 0.5));
+}
+
+.hydro-emblem-wrapper:hover .hydro-brand-title {
+    color: #042116;
+    letter-spacing: 0.00em;
+    transform: scale(1.03);
+}
+
+.hydro-emblem-wrapper:hover .hydro-status-pill {
+    background: #0B3828;
+    border-color: #0B3828;
+    transform: translateY(1px);
+}
+
+.hydro-emblem-wrapper:hover .hydro-status-pill .hydro-status-text {
+    color: #C4F646;
+}
+
+.hydro-emblem-wrapper:hover .hydro-pulse-beacon {
+    background: #C4F646;
+    box-shadow: 0 0 10px #C4F646;
+}
+
+.hydro-emblem-wrapper:active .hydro-card-core {
+    transform: translateY(-8px) scale(1.02) rotate(0deg);
+    transition-duration: 0.15s;
+}
+
+/* Keyframes */
+@keyframes rotateOrbit {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateOrbitReverse {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes chipFloatA {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes chipFloatB {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(4px);
+    }
+}
+
+@keyframes floatEmblem {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+        box-shadow: 0 20px 45px rgba(178, 237, 63, 0.42), 0 6px 18px rgba(11, 56, 40, 0.06);
+    }
+    50% {
+        transform: translateY(-10px) rotate(1deg);
+        box-shadow: 0 30px 58px rgba(178, 237, 63, 0.58), 0 0 34px rgba(196, 246, 70, 0.35);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+        box-shadow: 0 20px 45px rgba(178, 237, 63, 0.42), 0 6px 18px rgba(11, 56, 40, 0.06);
+    }
+}
+
+@keyframes dropPulse {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-4px) scale(1.05);
+    }
+}
+
+@keyframes glassShine {
+    0%, 20% {
+        transform: rotate(25deg) translate(-100%, 0);
+    }
+    60%, 100% {
+        transform: rotate(25deg) translate(120%, 0);
+    }
+}
+
+@keyframes beaconPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+    }
+    50% {
+        transform: scale(1.25);
+        box-shadow: 0 0 0 4px rgba(16, 185, 129, 0);
+    }
+}
+
+
+
+/* Section Editorial Titles */
+.section-headline {
+    font-family: 'Fraunces', serif !important;
+    font-size: 2.1rem !important;
+    font-weight: 700 !important;
+    color: #0B3828 !important;
+    letter-spacing: -0.02em !important;
+    margin: 0 0 8px 0 !important;
+}
+
+.section-subhead {
+    color: #536D5F !important;
+    font-size: 1.02rem !important;
+    margin-bottom: 22px !important;
+}
+
+/* Minimalist Clean Cards */
+.clean-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(11, 56, 40, 0.08);
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 14px rgba(11, 56, 40, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.clean-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(11, 56, 40, 0.06);
+    border-color: rgba(11, 56, 40, 0.16);
+}
+
+.clean-card-danger {
+    background: #FFF8F7 !important;
+    border: 1px solid #FCA5A5 !important;
+    border-left: 5px solid #EF4444 !important;
+}
+
+/* Dark Editorial Contrast Section (Like reference bottom banner) */
+.dark-feature-card {
+    background: #0A2E21;
+    border-radius: 20px;
+    padding: 32px 36px;
+    color: #FFFFFF;
+    margin: 24px 0;
+    box-shadow: 0 10px 30px rgba(10, 46, 33, 0.15);
+}
+
+.dark-feature-title {
+    font-family: 'Fraunces', serif !important;
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    line-height: 1.15;
+    margin: 0 0 12px 0 !important;
+}
+
+.dark-feature-title em {
+    font-style: italic;
+    color: #C4F646;
+}
+
+/* Metric Display Overrides */
+[data-testid="stMetric"] {
+    background: #FFFFFF !important;
+    border: 1px solid rgba(11, 56, 40, 0.08) !important;
+    border-radius: 16px !important;
+    padding: 18px 22px !important;
+    box-shadow: 0 2px 12px rgba(11, 56, 40, 0.03) !important;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #5C7567 !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: #0B3828 !important;
+    font-size: 1.85rem !important;
+    font-weight: 700 !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+[data-testid="stMetricDelta"] {
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+}
+
+/* Modern Pill Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+    background-color: #EEF3E9;
+    padding: 6px;
+    border-radius: 14px;
+    border: 1px solid rgba(11, 56, 40, 0.06);
+    margin-bottom: 24px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    height: 44px;
+    background-color: transparent;
+    border-radius: 10px;
+    color: #4C6556;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0 20px;
+    border: none !important;
+    transition: all 0.2s ease;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    color: #0B3828;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: #FFFFFF !important;
+    color: #0B3828 !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 10px rgba(11, 56, 40, 0.08) !important;
+    border: 1px solid rgba(11, 56, 40, 0.08) !important;
+}
+
+/* Primary Button Styling */
+.stButton > button {
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    padding: 11px 22px !important;
+    transition: all 0.25s ease !important;
+    border: 1px solid rgba(11, 56, 40, 0.12) !important;
+    background-color: #FFFFFF !important;
+    color: #0B3828 !important;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 16px rgba(11, 56, 40, 0.1) !important;
+    border-color: #0B3828 !important;
+}
+
+button[kind="primary"] {
+    background: #0B3828 !important;
+    color: #C4F646 !important;
+    border: none !important;
+    box-shadow: 0 4px 16px rgba(11, 56, 40, 0.25) !important;
+}
+
+button[kind="primary"]:hover {
+    background: #114B36 !important;
+    color: #E2FF75 !important;
+    box-shadow: 0 6px 22px rgba(11, 56, 40, 0.35) !important;
+}
+
+/* Chat Message Bubbles */
+.chat-bubble-user {
+    background: #FFFFFF;
+    border: 1px solid rgba(11, 56, 40, 0.1);
+    border-radius: 16px 16px 4px 16px;
+    padding: 16px 20px;
+    color: #0B3828;
+    margin-bottom: 12px;
+    margin-left: 40px;
+    box-shadow: 0 2px 8px rgba(11, 56, 40, 0.03);
+}
+
+.chat-bubble-ai {
+    background: #F0F5EC;
+    border: 1px solid rgba(11, 56, 40, 0.12);
+    border-radius: 16px 16px 16px 4px;
+    padding: 18px 24px;
+    color: #0B3828;
+    margin-bottom: 16px;
+    margin-right: 40px;
+    box-shadow: 0 2px 10px rgba(11, 56, 40, 0.03);
+}
+
+.chat-source-tag {
+    background: #E1EED8;
+    border: 1px solid #CCE3BD;
+    color: #245720;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 4px 4px 0 0;
+}
+
+/* Flow Path Bar */
+.flow-bar {
+    background: #FFFFFF;
+    border: 1px solid rgba(11, 56, 40, 0.08);
+    border-radius: 14px;
+    padding: 14px 22px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 10px rgba(11, 56, 40, 0.02);
+}
+
+/* Code & Pre Blocks */
+code, pre {
+    font-family: 'JetBrains Mono', monospace !important;
+    background-color: #EEF3E8 !important;
+    border: 1px solid rgba(11, 56, 40, 0.08) !important;
+    color: #0B3828 !important;
+    border-radius: 6px !important;
+}
+
+/* Table Clean Styling & High-Contrast Typography */
+.stTable, table, [data-testid="stTable"] {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(11, 56, 40, 0.12) !important;
+    background-color: #FFFFFF !important;
+    color: #0B3828 !important;
+    width: 100% !important;
+}
+
+.stTable table, [data-testid="stTable"] table {
+    background-color: #FFFFFF !important;
+    color: #0B3828 !important;
+    border-collapse: collapse !important;
+    width: 100% !important;
+}
+
+.stTable th, table th, [data-testid="stTable"] th,
+.stTable th *, table th *, [data-testid="stTable"] th * {
+    background-color: #EEF3E9 !important;
+    color: #0B3828 !important;
+    font-weight: 700 !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 13px !important;
+    padding: 12px 16px !important;
+    border-bottom: 2px solid rgba(11, 56, 40, 0.15) !important;
+    text-align: left !important;
+}
+
+.stTable td, table td, [data-testid="stTable"] td,
+.stTable td *, table td *, [data-testid="stTable"] td * {
+    background-color: #FFFFFF !important;
+    color: #0B3828 !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    padding: 12px 16px !important;
+    border-bottom: 1px solid rgba(11, 56, 40, 0.08) !important;
+}
+
+.stTable tr:hover td, table tr:hover td, [data-testid="stTable"] tr:hover td,
+.stTable tr:hover td *, table tr:hover td *, [data-testid="stTable"] tr:hover td * {
+    background-color: #F8FAF6 !important;
+    color: #0B3828 !important;
+}
+
+[data-testid="stTable"] [data-testid="stMarkdownContainer"] p {
+    color: #0B3828 !important;
+    font-weight: 600 !important;
+}
+
+/* Plotly Chart High-Contrast Text */
+.js-plotly-plot .plotly text {
+    fill: #0B3828 !important;
+}
+
