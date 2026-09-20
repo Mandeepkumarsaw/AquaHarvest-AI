@@ -56,7 +56,7 @@ sequenceDiagram
 ## 📂 Project Directory Structure
 
 ```
-focused-goodall/
+AquaHarvest AI/
 ├── .env.example                       # Optional environment configuration
 ├── README.md                          # Master documentation
 ├── requirements.txt                   # Free Python dependencies
